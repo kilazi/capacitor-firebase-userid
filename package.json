@@ -1,0 +1,54 @@
+{
+  "name": "firebase-userid",
+  "version": "0.1.0",
+  "description": "Send the user ID used in your local environment to the Firebase Analytics",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Max Kilazi",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4",
+    "@capacitor/ios": "latest",
+    "@capacitor/android": "latest"
+  },
+  "peerDependencies": {
+    "firebase": "^5.8.6"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "FirebaseUserid.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "firebase",
+    "analytics"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kilazi/capacitor-firebase-userid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kilazi/capacitor-firebase-userid.git/issues"
+  }
+}
